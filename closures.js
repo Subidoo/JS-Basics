@@ -74,26 +74,20 @@ newF('435-215-9248');
 */
 
   //Code Here
-var codeLove = function() {
-  return('I love code');
+function codeLove() {
+  return 'I love code';
 }
-codeLove();
 
-var codeFriend = function(codeLove){
-  var count = 0;
+function codeFriend(poop){
+  var hasBeenCalled = false;
    return function() {
-    if (count === 0) {
-      count++;
-      return codeLove();
+    if (hasBeenCalled === false) {
+      return 'poop';
     }
-    else {
-      return null;
-    }
-  }
+    hasBeenCalled = true;
+  };
 }
-
-var codeEcho = codeFriend(codeLove);
-
+var codeEcho = codeFriend();
 codeEcho();
 //Next Problem
 
@@ -117,7 +111,7 @@ var fnCounter = function(N) {
     }
   }
 }
-var fin = fnCounter(5);
+var fin = fnCounter(10);
 fin();
 
 //Next Problem
@@ -160,18 +154,17 @@ fin();
       (function() {
       var num = i;
       setTimeout( function timer(){
-          console.log( num );
+          console.log(num);
         }, i*1000 );
       })();
     };
   }
   counter();
 //Next Problem
-
-
-
 /*
-  Make the following code work
+var funcArray = function(){
+
+}
 
   funcArray[0]() //0
   funcArray[1]() //1
@@ -179,6 +172,10 @@ fin();
   funcArray[3]() //3
   funcArray[4]() //4
   funcArray[5]() //5
+
+  Make the following code work
+
+ 
 
   *Hint: Don't let this fool you. Break down what's really happening here.
 */

@@ -6,15 +6,15 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
- var isTyler = function(name) {
-  	if (name === 'Tyler') {
-  		return true;
-  	} else {
+ function isTyler(name) {
+  	if (name !== 'Tyler') {
   		return false;
+  	} else {
+  		return true;
   	}
   }
 
-  isTyler ('Tyler');
+  isTyler();
 
 //Next problem
 
@@ -45,21 +45,22 @@ var getName = function() {
   	return name;
   }
 
+
 var welcome = function() {
-	alert('Welcome ' + previous)
+  getName();
+  var previous = getName();
+  alert('Welcome, ' + previous)
 }
-var previous = getName();
-welcome(previous);
+
+welcome();
+
 
 //Next problem
-
-
-
 
 //What is the difference between arguments and parameters?
 
   //Answer Here
-  Parameters is the value of the function. Arguments are what you are passing into the parameter of the function
+ // Parameters is a place holder for a variable name of the function. Arguments are what you are passing into the parameter of the function
 
 
 //Next problem
@@ -70,7 +71,7 @@ welcome(previous);
 
 
   //Answer Here
-NaN, '', 0, undefined, null, false
+// NaN, '', 0, undefined, null, false
 
 
 //Next Problem
@@ -103,7 +104,7 @@ alert(newMyName());
   //Code Here
   var outerFn = function(name) {
   	return function() {
-  		return name;
+  		return 'name';
   	};
   }
 
