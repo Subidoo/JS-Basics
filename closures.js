@@ -82,7 +82,7 @@ function codeFriend(poop){
   var hasBeenCalled = false;
    return function() {
     if (hasBeenCalled === false) {
-      return 'poop';
+      return codeLove();
     }
     hasBeenCalled = true;
   };
@@ -99,10 +99,10 @@ codeEcho();
   After it's been invoked 'N' number of times, return 'STOP'.
 */
 
-var fnCounter = function(N) {
+function fnCounter(foo, N) {
   var counter = 0;
   return function() {
-    if (counter !== N) {
+    if (counter <= N) {
       counter++;
       return counter;
     }
@@ -111,8 +111,8 @@ var fnCounter = function(N) {
     }
   }
 }
-var fin = fnCounter(10);
-fin();
+var fin = fnCounter();
+fin(10);
 
 //Next Problem
 
@@ -161,8 +161,8 @@ fin();
   }
   counter();
 //Next Problem
-/*
-var funcArray = function(){
+
+function funcArray(){
 
 }
 
@@ -172,7 +172,7 @@ var funcArray = function(){
   funcArray[3]() //3
   funcArray[4]() //4
   funcArray[5]() //5
-
+/*
   Make the following code work
 
  
